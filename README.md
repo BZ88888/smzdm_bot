@@ -9,15 +9,15 @@
 
 ## 更新日志
 
-- 2022-12-08, 签到失败，浏览器端签到需要滑动验证码认证.
+- 2022-12-08, 签到失败，浏览器端签到需要滑动验证码认证
 - 2023-01-11, 更改`User-Agent`为`iPhone`后可`bypass`滑块认证
 - 2023-01-14, 登录认证失败, 签到失效
-- 2023-02-18, 通过安卓端验证登录，感谢 [jzksnsjswkw/smzdm-app](https://github.com/jzksnsjswkw/smzdm-app) 的思路. 旧版代码查看 [old](https://github.com/Chasing66/smzdm_bot/tree/old) 分支
+- 2023-02-18, 通过安卓端验证登录，感谢 [jzksnsjswkw/smzdm-app](https://githubfast.com/jzksnsjswkw/smzdm-app) 的思路. 旧版代码查看 [old](https://githubfast.com/Chasing66/smzdm_bot/tree/old) 分支
 - 2023-02-25, 新增`all_reward` 和`extra_reward`两个接口，本地支持多用户运行
 - 2023-02-27, 修复本地 docker-compose 运行问题; 本地 docker-compose 支持多账号运行
 - 2023-03-01, 支持青龙面板且支持多账号
 - 2023-03-01, 仅需要`ANDROID_COOKIE`和`SK`两个变量，自动生成`USER_AGENT`和`TOKEN`, 引入随机休眠，减小被封概率
-- 2023-03-02, 新增每日抽奖，参考 hex-ci 的[思路](https://github.com/hex-ci/smzdm_script/blob/main/smzdm_lottery.js)
+- 2023-03-02, 新增每日抽奖，参考 hex-ci 的[思路](https://githubfast.com/hex-ci/smzdm_script/blob/main/smzdm_lottery.js)
 - 2023-04-06, 新增企业微信BOT-WEBHOOK通知推送方式，仅需要`ANDROID_COOKIE`一个变量, `SK`改为可选变量. 如果能够通过抓包抓到，最好填上.
 - 2023-04-23，更新抽奖功能
 
@@ -56,7 +56,7 @@ SCH_MINUTE=
 
 ### 2.2 从`config.toml`中读取
 
-参考模板 [app/config/config_example.toml](https://github.com/Chasing66/smzdm_bot/blob/main/app/config/config_example.toml)
+参考模板 [app/config/config_example.toml](https://githubfast.com/Chasing66/smzdm_bot/blob/main/app/config/config_example.toml)
 
 ```toml
 [user.A]
@@ -83,7 +83,7 @@ TG_BOT_API = ""
 ### 3.1 青龙面板
 
 ```
-ql repo https://github.com/Chasing66/smzdm_bot "smzdm_ql.py"
+ql repo https://githubfast.com/Chasing66/smzdm_bot "smzdm_ql.py"
 ```
 
 默认情况下从环境变量读取配置,仅支持单用户.
@@ -111,7 +111,7 @@ python main.py
 
 配置参考[2.2 从`config.toml`中读取](#22-从configtoml中读取)
 
-修改 [docker-compose.yaml](https://github.com/Chasing66/smzdm_bot/blob/main/docker-compose.yml), 将`app/config/config.toml`mout 到容器内`/smzdm_bot/config/config.toml`
+修改 [docker-compose.yaml](https://githubfast.com/Chasing66/smzdm_bot/blob/main/docker-compose.yml), 将`app/config/config.toml`mout 到容器内`/smzdm_bot/config/config.toml`
 
 ```yaml
 version: "3.9"
@@ -135,7 +135,7 @@ services:
 
 GitHub Action 仅支持`env`配置方式, **务必自行更改为随机时间**
 
-1. Fork[此仓库项目](https://github.com/Chasing66/smzdm_bot)>, 欢迎`star`~
+1. Fork[此仓库项目](https://githubfast.com/Chasing66/smzdm_bot)>, 欢迎`star`~
 2. 修改 `.github/workflows/checkin.yml`里的下面部分, 取消`schedule`两行的注释，自行设定时间
 
 ```yaml
